@@ -1,2 +1,3 @@
 #!/bin/bash 
-python hw2_generative.py $1 $2 $3 $4 $5 $6
+python3 hw2_generative.py --train --train_data_path $3 --train_label_path $4 --test_data_path $5 --output_dir $6
+python3 hw2_generative.py --infer --train_data_path $3 --train_label_path $4 --test_data_path $5 --output_dir $6
