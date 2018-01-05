@@ -1,2 +1,2 @@
 #!/bin/bash
-python predict.py --data $1 --test $2 --out $3
+python3 predict.py --data $1 --test $2 --out $3
