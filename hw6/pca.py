@@ -29,7 +29,7 @@ def main(args):
     U, s, V = np.linalg.svd((images - images_mean).T, full_matrices=False)
 
     #reconstructing
-    target = io.imread(args.target).flatten()
+    target = io.imread(args.imgs+'/'+args.target).flatten() - images_mean
     result = np.zeros(target.shape[0])
     for i in range(args.eig): result += (np.dot(target, U[:, i]) * U[:, i]).T
 
